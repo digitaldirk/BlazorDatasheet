@@ -3,7 +3,7 @@
 @using BlazorDatasheet.Core.Formats.DefaultConditionalFormats
 @using BlazorDatasheet.DataStructures.Geometry
 
-<input type="range" min="0" max="10" step="0.05"
+<code>x</code> <input type="range" min="0" max="10" step="0.05"
        @oninput="@(e => _sheet.FormulaEngine.SetVariable("x", e.Value))"/>
 
 <Datasheet Sheet="_sheet" ShowColHeadings="false" ShowRowHeadings="false"/>

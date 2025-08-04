@@ -26,7 +26,7 @@
 
 <CodeBlock>sheet.Commands.Undo()</CodeBlock>
 
-<h4>Creating commands</h4>
+<h4>Creating Commands</h4>
 
 <div class="block">
     Creating custom commands can be done by extending the BaseCommand class. The BaseCommand class implements ICommand
@@ -37,7 +37,7 @@
     To make a command undoable, it should implement the IUndoableCommand interface.
 </div>
 
-<h4>Command groups</h4>
+<h4>Command Groups</h4>
 
 <div class="block">
     A command group can be created by:
@@ -54,7 +54,7 @@
     A command group collects commands and executes them sequentially. A single undo will undo all commands in the group.
 </div>
 
-<h4>Intercepting commands</h4>
+<h4>Intercepting Commands</h4>
 
 <div class="block">
     The following events can be used to listen for command execution:
@@ -71,7 +71,7 @@ sheet.Commands.BeforeCommandRun // called before a command is run
     args to true.
 </div>
 
-<h4>Chaining commands</h4>
+<h4>Chaining Commands</h4>
 
 <div class="block">
     In conjunction with the events described above, commands can be attached to run before or after a command has been

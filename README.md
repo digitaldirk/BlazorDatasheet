@@ -9,17 +9,23 @@ A simple datasheet component for editing tabular data.
 <img width="512" alt="DatasheetScreenshot" src="https://github.com/user-attachments/assets/b58fa2f3-f49d-4b20-9cbb-3ae1039d88bc">
 
 #### Features
-- Data editing
+- Data Editing
   - Built in editors including text, date, select, boolean, text area, enum
-  - Add custom editors for any data type
+  - Add custom renderers or editors for any data type
 - Conditional formatting
 - Data validation
-- Formula
 - Keyboard navigation
 - Copy and paste from tabulated data
-- Virtualization - handles many cells at once in both rows & cols.
+- Virtualization - handles many cells at once in both row & col directions
+- Formula
+- Sorting & column filtering
+- Cell formatting
+- Auto-fill
+- Frozen rows/columns
+- AutoFit rows & columns
+- Undo/redo
 
-Demo: https://anmcgrath.github.io/BlazorDatasheet/
+**Demo:** https://anmcgrath.github.io/BlazorDatasheet/
 
 ### Getting Started
 
@@ -127,7 +133,7 @@ sheet.SetFormat(sheet.Range(new ColumnRegion(5)), new CellFormat() { FontWeight 
 sheet.Cells[0, 0].Format = new CellFormat() { TextAlign = "center" };
 ```
 
-When a cell format is set, it will be merged into any existing cell formats in the region that it is applied to. Any non-null format paremeters will be merged:
+When a cell format is set, it will be merged into any existing cell formats in the region that it is applied to. Any non-null format parameters will be merged:
 
 ```csharp
 sheet.Range("A1").Format = new CellFormat() { BackgroundColor = "red" };
